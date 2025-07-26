@@ -9703,3 +9703,20 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.profile-bg{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+
+/* soft dark overlay + blend so text stays readable and edges fade nicely */
+.profile-bg::before{
+  content:'';
+  position:absolute;
+  inset:0;                     /* top/left/right/bottom:0 */
+  background:linear-gradient(135deg,rgba(0,0,0,.25),rgba(0,0,0,.55));
+  mix-blend-mode:multiply;     /* merges overlay with the image */
+  pointer-events:none;         /* keeps it non‑interactive */
+}
