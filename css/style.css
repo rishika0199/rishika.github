@@ -9779,3 +9779,27 @@ textarea.form-control {
   object-fit:contain;
   margin-bottom:.5rem;
 }
+
+/* ---- skill grid tweaks ---- */
+#skills [class*="col-"]{          /* slimmer gutters left/right */
+  padding-left:.25rem;
+  padding-right:.25rem;
+}
+
+.skill-badge{                     /* white round badge */
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:48px;
+  height:48px;
+  background:#fff;
+  border-radius:50%;
+  margin-bottom:.25rem;
+}
+
+.skill-icon{                      /* logo inside the badge */
+  width:32px;
+  height:32px;
+  object-fit:contain;
+  filter:brightness(0) invert(1); /* flip black logos to white on dark bg */
+}
