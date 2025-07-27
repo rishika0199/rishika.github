@@ -9801,5 +9801,5 @@ textarea.form-control {
   width:32px;
   height:32px;
   object-fit:contain;
-  filter:brightness(0) invert(1); /* flip black logos to white on dark bg */
+/*   filter:brightness(0) invert(1); /* flip black logos to white on dark bg */ */
 }
