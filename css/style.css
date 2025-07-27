@@ -9720,3 +9720,50 @@ textarea.form-control {
   mix-blend-mode:multiply;     /* merges overlay with the image */
   pointer-events:none;         /* keeps it non‑interactive */
 }
+
+
+/* ─── Full‑width hero like the mock‑up (top‑right concept) ───────────── */
+
+/* 1. Let the image block occupy the whole row */
+.row.slider-text{
+  position:relative;                 /* so we can absolutely‑position the text */
+}
+.row.slider-text .one-third.img{
+  flex:0 0 100%;                     /* 100 % width instead of the old 40‑50 %  */
+  max-width:100%;
+  height:450px;                      /* adjust if you want shorter/taller */
+  background-size:cover;
+  background-position:center;
+}
+
+/* 2. Dark overlay to improve legibility */
+.row.slider-text .one-third.img .overlay{
+  background:rgba(0,0,0,.55);        /* stronger than before for better contrast */
+}
+
+/* 3. Place the text block ON TOP of the image */
+.row.slider-text .one-forth{
+  position:absolute;
+  top:50%;
+  left:6%;                           /* move it away from the edge */
+  transform:translateY(-50%);
+  width:38%;                         /* keep it narrow so it doesn't hide the photo */
+  background:transparent;            /* remove old black panel */
+  color:#fff;
+  z-index:2;                         /* make sure it sits above the overlay */
+}
+
+/* 4. Accent colours like the mock‑up */
+.row.slider-text .one-forth .subheading,
+.row.slider-text .one-forth h1 span{
+  color:#f5b41b;                     /* warm yellow/gold */
+}
+
+/* 5. Keep things readable on tablets/phones */
+@media (max-width:992px){
+  .row.slider-text .one-forth{
+    width:80%;
+    left:10%;
+    text-align:center;
+  }
+}
