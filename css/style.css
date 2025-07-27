@@ -9771,3 +9771,11 @@ textarea.form-control {
 .navbar-brand{
   margin-left:12px;        /* tweak this value if you want more/less space */
 }
+
+/* uniform sizing for skill logos */
+.skill-icon{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  margin-bottom:.5rem;
+}
