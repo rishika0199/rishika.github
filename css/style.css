@@ -9767,3 +9767,7 @@ textarea.form-control {
     text-align:center;
   }
 }
+
+.navbar-brand{
+  margin-left:12px;        /* tweak this value if you want more/less space */
+}
